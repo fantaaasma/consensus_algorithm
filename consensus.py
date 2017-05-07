@@ -51,7 +51,7 @@ def compute_consensus(X, distance_fun):
 
 
 def compare_cons(data):
-    print('dane wejsciowe:')
+    print('dane wejściowe:')
     for x in data:
         print(x)
 
