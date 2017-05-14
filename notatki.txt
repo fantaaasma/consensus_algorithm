@@ -1,0 +1,49 @@
+symptomy, cechy, wlascisowsci:
+
+1. wiek
+2. plec
+3. chorba wsp 3
+4. chorba wsp 4
+5. rodzaj operacji 1
+6. rodzaj operacji 3
+
+
+czestosc wystepowaia  IdRodzajZabiegu
+1 3299
+2 75
+3 332
+4 17
+5 14
+7 32
+8 41
+9 17
+czestosc wystepowaia  ChorobyWspolistniejace
+0 1311
+1 12
+2 10
+3 465
+4 233
+5 290
+6 66
+7 18
+8 429
+9 317
+10 97
+11 344
+12 22
+13 212
+14 1
+czestosc wystepowaia  powiklanie
+1 2998
+2 26
+3 11
+4 23
+5 11
+6 88
+7 223
+8 359
+9 53
+10 3
+11 6
+12 17
+13 9
