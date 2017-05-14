@@ -21,13 +21,13 @@ ADDITIONAL_DISEASES = 'ChorobyWspolistniejace'
 
 COMPLICATION = 'powiklanie'
 
-# def get_complications_dict():
-#     cursor.execute('SELECT * FROM {};'.format(COMPLICATIONS_DICT_TABLE_NAME))
-#     complications_dict = {}
-#     for t in cursor.fetchall():
-#         complications_dict[t[0]] = t[1]
-#
-#     return complications_dict
+def get_complications_dict():
+    cursor.execute('SELECT * FROM {};'.format(COMPLICATIONS_DICT_TABLE_NAME))
+    complications_dict = {}
+    for t in cursor.fetchall():
+        complications_dict[t[0]] = t[1]
+
+    return complications_dict
 #
 # def get_complications_dict():
 #     cursor.execute('SELECT * FROM {};'.format(COMPLICATIONS_DICT_TABLE_NAME))
@@ -38,48 +38,16 @@ COMPLICATION = 'powiklanie'
 #     return complications_dict
 
 def create_case_dicts(data_tuple):
-    case_dicts = []
     case_dict = dict()
-    id = data_tuple[0]
-    disease_number = data_tuple[1]
-    year = data_tuple[2]
-
     case_dict[ID] = data_tuple[0]
     case_dict[DISEASE_NUMBER] = data_tuple[1]
     case_dict[YEAR] = data_tuple[2]
-
-    case_dict[AGE]  = 1 if data_tuple[3] > 45 else 0
+    case_dict[AGE] = 1 if data_tuple[3] > 45 else 0
     case_dict[SEX] = data_tuple[4] - 1
-    complications = get_case_data_from_table(COMPLICATIONS_TABLE_NAME, case_dict)
-    additional_diseases = get_case_data_from_table(ADDITIONAL_DISEASES_TABLE_NAME, case_dict)
-    operation_types = get_case_data_from_table(CATALOGUE_DATA_TABLE_NAME, case_dict, 13, 'Karta_')
-    for c in complications:
-        for ad in additional_diseases:
-            for ot in operation_types:
-                case_dicts.append(enrich_case_dict(case_dict, age, sex, c, ad, ot))
+    case_dict[COMPLICATION] = get_case_data_from_table(COMPLICATIONS_TABLE_NAME, case_dict)
+    case_dict[ADDITIONAL_DISEASES] = get_case_data_from_table(ADDITIONAL_DISEASES_TABLE_NAME, case_dict)
+    case_dict[OPERATION_TYPE] = get_case_data_from_table(CATALOGUE_DATA_TABLE_NAME, case_dict, 13, 'Karta_')
 
-    #case_dicts.append(case_dict)
-
-    return case_dicts
-
-
-
-
-def enrich_case_dict(case_dict,
-                            age,
-                            sex,
-                            complication,
-                            additional_disease,
-                            operation_type):
-    # case_dict = dict()
-    # case_dict[ID] = id
-    # case_dict[DISEASE_NUMBER] = disease_number
-    # case_dict[YEAR] = year
-    case_dict[AGE] = age
-    case_dict[SEX] = sex
-    case_dict[COMPLICATION] = complication
-    case_dict[ADDITIONAL_DISEASES] = additional_disease
-    case_dict[OPERATION_TYPE] = operation_type
     return case_dict
 
 
@@ -107,36 +75,37 @@ def get_case_data_from_table(table_name, case_dict, items_to_get=2, prefix_name=
 
 
 def get_cases():
+    connection = pypyodbc.win_connect_mdb(database_path)
+    cursor = connection.cursor()
     cursor.execute('select * from {};'.format(caseS_TABLE_NAME))
     cases_data = cursor.fetchall()
     cases = []
     n = len(cases_data)
     i = 0
     d = int(n/100)
+    print('wczytywanie danych z bazy')
     for pd in cases_data:
         i += 1
         if (i % d) == 0:
             print('{}%'.format(int(i*100/n)))
-        for case in create_case_dicts(pd):
-            cases.append(case)
-
+        cases.append(create_case_dicts(pd))
+    print('zakonczono wczytywanie danych z bazy')
+    connection.close()
     return cases
 
 def print_stats(cases, type_name):
     d = {}
     for c in cases:
-        type = c[type_name]
-        d[type] = d.get(type, 0) + 1
+        types = c[type_name]
+        for t in types:
+            d[t] = d.get(t, 0) + 1
     print('czestosc wystepowaia ', type_name)
     for x, y in d.items():
         print(x, y)
 
-cases = get_cases()
-print_stats(cases, OPERATION_TYPE)
-print_stats(cases, ADDITIONAL_DISEASES)
-print_stats(cases, COMPLICATION)
 
-def get_views(cases, filter_additional_diseases, filter_operation_type):
+
+def get_views(cases, filter_additional_diseases, filter_operation_type,filter_complications):
     outs = []
 
     for c in cases:
@@ -144,24 +113,17 @@ def get_views(cases, filter_additional_diseases, filter_operation_type):
         out.append(c[SEX])
         out.append(c[AGE])
         for ad in filter_additional_diseases:
-            out.append(int(ad == c[ADDITIONAL_DISEASES]))
+            out.append(int(ad in c[ADDITIONAL_DISEASES]))
         for ot in filter_operation_type:
-            out.append(int(ot == c[OPERATION_TYPE]))
-        out.append(c[COMPLICATION])
+            out.append(int(ot in c[OPERATION_TYPE]))
+        for comp in filter_complications:
+            out.append(int(comp in c[COMPLICATION]))
         outs.append(out)
     return outs
 
 
-for p in cases[100:120]:
-    print(p)
-
-views = get_views(cases,
-                  filter_additional_diseases=[3, 4, 7],
-                  filter_operation_type=[1, 3]
-                  )
-
-
-for v in views[100:120]:
-    print(v)
-
-connection.close()
+# views = get_views(cases,
+#                   filter_additional_diseases=[3, 4, 7],
+#                   filter_operation_type=[1, 3],
+#                   filter_complications=[1, 9, 7]
+#                   )

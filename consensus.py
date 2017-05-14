@@ -60,7 +60,16 @@ def compare_cons(data):
 
 
 def compute_consensus_opt1(data):
-    return compute_consensus(data, distance1)
+    n = len(data[0])
+    consensus = [0] * n
+    for e in data:
+        for i in range(n):
+            consensus[i] += e[i]
+
+    for i in range(n):
+        consensus[i] = int(0.5 + consensus[i]/len(data))
+
+    return consensus
 
 
 def compute_consensus_opt2(data):
