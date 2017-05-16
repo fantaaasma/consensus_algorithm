@@ -1,3 +1,9 @@
+import random
+
+
+def generate_random_vector(n):
+    return [random.randint(0, 1) for x in range(n)]
+
 
 def compute_single_distance(a, b):
     single_distance = 0
@@ -72,5 +78,21 @@ def compute_consensus_opt1(data):
     return consensus
 
 
-def compute_consensus_opt2(data):
+def compute_consensus_opt2_brutal_force(data):
     return compute_consensus(data, distance2)
+
+
+def compute_consensus_opt2(data):
+    vector_length = len(data[0])
+    consensus = generate_random_vector(vector_length)
+    distance = distance2(consensus, data)
+
+    for i in range(vector_length):
+        consensus[i] = 0 if consensus[i] else 1
+        new_distance = distance2(consensus, data)
+        if new_distance < distance:
+            distance = new_distance
+        else:
+            consensus[i] = 0 if consensus[i] else 1
+
+    return consensus

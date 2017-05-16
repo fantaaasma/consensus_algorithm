@@ -1,4 +1,4 @@
-from consensus_algorithm.consensus import compute_consensus_opt1
+from consensus_algorithm.consensus import compute_consensus_opt1, compute_consensus_opt2, compute_consensus_opt2_brutal_force
 from consensus_algorithm.ncb import BernoulliNB
 from consensus_algorithm.data import get_views, get_cases, get_complications_dict
 
@@ -66,8 +66,8 @@ cases = get_cases()
 
 
 views = get_views(cases,
-                  filter_additional_diseases=[0, 3, 4, 7],
-                  filter_operation_type=[1, 2, 3],
+                  filter_additional_diseases=[0, 3, 4, 7, 8],
+                  filter_operation_type=[1, 2, 3, 4, 5],
                   filter_complications=[x + 1 for x in range(NUMBER_OF_COMPLICATIONS)]
                   )
 
