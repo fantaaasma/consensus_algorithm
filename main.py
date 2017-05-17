@@ -3,67 +3,9 @@ from consensus_algorithm.ncb import BernoulliNB
 from consensus_algorithm.data import get_views, get_cases, get_complications_dict
 
 NUMBER_OF_COMPLICATIONS = 13
-# # TODO te dane będą pobierane z bazy danych
-# complications = [
-#   [0, 1, 0],
-#   [0, 1, 1],
-#   [0, 0, 1],
-# ]
-#
-# no_complications = [
-#   [1, 0, 0],
-#   [1, 1, 0],
-#   [1, 0, 1],
-# ]
-#
-# patient_data = [
-#     [1, 0, 1],
-#     [0, 1, 1],
-#     [0, 1, 0],
-#     [1, 0, 0]
-# ]
-#
-# class Algorithm:
-#
-#     def __init__(self, complications_data, no_complications_data, consensus_fun=compute_consensus_opt1):
-#         self.complications_data = complications_data
-#         self.no_complications_data = no_complications_data
-#         self.nb = BernoulliNB(complications_data, no_complications_data)
-#         self.consensus = consensus_fun(complications_data)
-#         print('consensus', self.consensus)
-#
-#     def __get_consensus_probability(self, input_vector):
-#         if len(input_vector) != len(self.consensus):
-#             raise Exception('Wektor symptomow nieprawidlowej dlugosci')
-#         n = len(input_vector)
-#         probability = 0
-#         for i in range(n):
-#             if self.consensus[i] == input_vector[i]:
-#                 probability += 1
-#
-#         return probability / n
-#
-#     def __get_bayes_probability(self, input_vector):
-#         return self.nb.get_probabilities(input_vector)[0]
-#
-#     def compute(self, input_vector):
-#         consensus_probability = self.__get_consensus_probability(input_vector)
-#         bayes_probability = self.__get_bayes_probability(input_vector)
-#         print('pc={:.2f}  \npb={:.2f}'.format(consensus_probability, bayes_probability))
-#         return (consensus_probability + bayes_probability) / 2
-#
-# algorithm = Algorithm(complications, no_complications, compute_consensus_opt1)
-#
-# for p in patient_data:
-#     print('symptomy ', p)
-#     complication_probability = algorithm.compute(p)
-#     print('prawdopodbienstwo powiklan = {:.2f}%'.format(complication_probability * 100))
 
 
 cases = get_cases()
-
-
-
 
 views = get_views(cases,
                   filter_additional_diseases=[0, 3, 4, 7, 8],
@@ -73,15 +15,6 @@ views = get_views(cases,
 
 
 NUMBER_OF_SYMPTOMS = len(views[0]) - NUMBER_OF_COMPLICATIONS
-
-# complications_cases = []
-# for v in views[:50]:
-#     if v[-1] == 0:
-#         complications_cases.append(v[:-1])
-
-# for v in views:
-#     print(v)
-
 
 def compute_aposteriori(data):
     N = len(data)
@@ -93,7 +26,6 @@ def compute_aposteriori(data):
 
     return [p/N for p in prob]
 
-apost_complications = compute_aposteriori(views)[-NUMBER_OF_COMPLICATIONS:]
 
 
 def compute_aposteriori_for_symptom(data, apost_complications, index_of_symptom, index_of_complication):
@@ -108,15 +40,46 @@ def compute_aposteriori_for_symptom(data, apost_complications, index_of_symptom,
 
     return (prob/N)/apost_complications[index_of_complication]
 
-s = [None] * NUMBER_OF_COMPLICATIONS
-for i in range(NUMBER_OF_COMPLICATIONS):
-    s[i] = [None] * NUMBER_OF_SYMPTOMS
-    for j in range(NUMBER_OF_SYMPTOMS):
-        s[i][j] = compute_aposteriori_for_symptom(views, apost_complications , j, i)
+
+def compute_aposteriori_for_symptoms(views, apost_complications):
+    apost_symptoms = [None] * NUMBER_OF_COMPLICATIONS
+    for i in range(NUMBER_OF_COMPLICATIONS):
+        apost_symptoms[i] = [None] * NUMBER_OF_SYMPTOMS
+        for j in range(NUMBER_OF_SYMPTOMS):
+            apost_symptoms[i][j] = compute_aposteriori_for_symptom(views, apost_complications, j, i)
+
+    return apost_symptoms
+
+def probability(complication_number, symptoms_vector, apost_complications, apost_symptoms):
+    denominator = 0
+    for k in range(len(apost_complications)):
+        x = apost_complications[k]
+        #print('x',x)
+        for j in range(len(apost_symptoms[k])):
+            x *= apost_symptoms[k][j] if symptoms_vector[j] else 1 - apost_symptoms[k][j]
+            #print('x',x)
+        denominator += x
+        #print('denominator',denominator)
+    #print('denominator', denominator)
+
+    numerator = 0
+    x = apost_complications[complication_number]
+    #print('x',x)
+    for j in range(len(apost_symptoms[complication_number])):
+        x *= apost_symptoms[complication_number][j] if symptoms_vector[j] else 1 - apost_symptoms[complication_number][j]
+        #print('x',x)
+    numerator += x
+    #print('numerator', numerator)
+    return numerator/denominator
+
 
 
 cd = get_complications_dict()
+apost_complications = compute_aposteriori(views)[-NUMBER_OF_COMPLICATIONS:]
+apost_symptoms = compute_aposteriori_for_symptoms(views, apost_complications)
 
-for i in range(len(s)):
-    print('{:35s} {:3.2f} {}'.format(cd[i+1], 100*apost_complications[i], ['%.2f' % (x *100) for x in s[i]]))
-#print('consensus\n',compute_consensus_opt1(complications_cases))
+for i in range(len(apost_symptoms)):
+    print('{:35s} {:3.2f} {}'.format(cd[i+1], 100*apost_complications[i], ['%.2f' % (x *100) for x in apost_symptoms[i]]))
+
+p = probability(0,[ x % 2 for x in range(NUMBER_OF_SYMPTOMS)], apost_complications, apost_symptoms)
+print(p)
