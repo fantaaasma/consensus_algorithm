@@ -73,6 +73,27 @@ def probability(complication_number, symptoms_vector, apost_complications, apost
     return numerator/denominator
 
 
+def get_cases_with_complication(complication_number, views):
+    cases_with_complication = []
+    for v in views:
+        if v[NUMBER_OF_SYMPTOMS + complication_number]:
+            cases_with_complication.append(v)
+
+    return cases_with_complication
+
+def compute_consensuses(views, consensus_fun):
+    consensuses = []
+    for i in range(NUMBER_OF_COMPLICATIONS):
+        consensuses.append(consensus_fun(get_cases_with_complication(i, views))[:NUMBER_OF_SYMPTOMS])
+
+    return consensuses
+
+def compute_probabilities(consensuses, views):
+    probabilities = []
+    for i in range(len(consensuses)):
+        p = probability(i, consensuses[i], apost_complications, apost_symptoms)
+        probabilities.append(p)
+    return probabilities
 
 cd = get_complications_dict()
 apost_complications = compute_aposteriori(views)[-NUMBER_OF_COMPLICATIONS:]
@@ -81,5 +102,19 @@ apost_symptoms = compute_aposteriori_for_symptoms(views, apost_complications)
 for i in range(len(apost_symptoms)):
     print('{:35s} {:3.2f} {}'.format(cd[i+1], 100*apost_complications[i], ['%.2f' % (x *100) for x in apost_symptoms[i]]))
 
-p = probability(0,[ x % 2 for x in range(NUMBER_OF_SYMPTOMS)], apost_complications, apost_symptoms)
-print(p)
+
+consensuses_opt1 = compute_consensuses(views, compute_consensus_opt1)
+probabilities1 = compute_probabilities(consensuses_opt1, views)
+
+consensuses_opt2 = compute_consensuses(views, compute_consensus_opt2)
+probabilities2 = compute_probabilities(consensuses_opt2, views)
+
+
+
+print('\n\nconsensus opt 1\n')
+for i in range(NUMBER_OF_COMPLICATIONS):
+    print('{}\n consensus : {} P(D{}|Sc)={}'.format(cd[i+1], consensuses_opt1[i], i, 100 * probabilities1[i]))
+
+print('\n\nconsensus opt 2\n')
+for i in range(NUMBER_OF_COMPLICATIONS):
+    print('{}\n consensus : {} P(D{}|Sc)={}'.format(cd[i+1], consensuses_opt2[i], i, 100 * probabilities2[i]))
