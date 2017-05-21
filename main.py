@@ -3,7 +3,7 @@ from consensus_algorithm.ncb import BernoulliNB
 from consensus_algorithm.data import get_views, get_cases, get_complications_dict
 
 NUMBER_OF_COMPLICATIONS = 13
-FOLD_NUMBER = 4
+FOLD_NUMBER = 10
 
 cases = get_cases()
 
@@ -103,30 +103,30 @@ def compute_probabilities(consensuses, views, apost_complications, apost_symptom
         probabilities.append(p)
     return probabilities
 
-# cd = get_complications_dict()
-# apost_complications = compute_aposteriori(views)[-NUMBER_OF_COMPLICATIONS:]
-# apost_symptoms = compute_aposteriori_for_symptoms(views, apost_complications)
+cd = get_complications_dict()
+apost_complications = compute_aposteriori(views)[-NUMBER_OF_COMPLICATIONS:]
+apost_symptoms = compute_aposteriori_for_symptoms(views, apost_complications)
+
+for i in range(len(apost_symptoms)):
+    print('{:35s} {:3.2f} {}'.format(cd[i+1], 100*apost_complications[i], ['%.2f' % (x *100) for x in apost_symptoms[i]]))
+
+
+consensuses_opt1 = compute_consensuses(views, compute_consensus_opt1)
+probabilities1 = compute_probabilities(consensuses_opt1, views, apost_complications, apost_symptoms)
+
+consensuses_opt2 = compute_consensuses(views, compute_consensus_opt2)
+probabilities2 = compute_probabilities(consensuses_opt2, views, apost_complications, apost_symptoms)
+
+
+
+print('\n\nconsensus opt 1\n')
+for i in range(NUMBER_OF_COMPLICATIONS):
+    print('{}\n consensus : {} P(D{}|Sc)={}'.format(cd[i+1], consensuses_opt1[i], i, 100 * probabilities1[i]))
+
+print('\n\nconsensus opt 2\n')
+for i in range(NUMBER_OF_COMPLICATIONS):
+    print('{}\n consensus : {} P(D{}|Sc)={}'.format(cd[i+1], consensuses_opt2[i], i, 100 * probabilities2[i]))
 #
-# for i in range(len(apost_symptoms)):
-#     print('{:35s} {:3.2f} {}'.format(cd[i+1], 100*apost_complications[i], ['%.2f' % (x *100) for x in apost_symptoms[i]]))
-#
-#
-# consensuses_opt1 = compute_consensuses(views, compute_consensus_opt1)
-# probabilities1 = compute_probabilities(consensuses_opt1, views, apost_complications, apost_symptoms)
-#
-# consensuses_opt2 = compute_consensuses(views, compute_consensus_opt2)
-# probabilities2 = compute_probabilities(consensuses_opt2, views, apost_complications, apost_symptoms)
-#
-#
-#
-# print('\n\nconsensus opt 1\n')
-# for i in range(NUMBER_OF_COMPLICATIONS):
-#     print('{}\n consensus : {} P(D{}|Sc)={}'.format(cd[i+1], consensuses_opt1[i], i, 100 * probabilities1[i]))
-#
-# print('\n\nconsensus opt 2\n')
-# for i in range(NUMBER_OF_COMPLICATIONS):
-#     print('{}\n consensus : {} P(D{}|Sc)={}'.format(cd[i+1], consensuses_opt2[i], i, 100 * probabilities2[i]))
-# #
 # def f():
 #     for complication_number in range(NUMBER_OF_COMPLICATIONS):
 #         cases = get_cases_with_complication(complication_number, views)
@@ -208,14 +208,42 @@ def show_stats(stats):
         tp, tn, fp, fn = stats[i]
         accuracy = (tp + tn) / (tp + tn + fp + fn)
         print('poprawność klasyfikacji:', accuracy)
+        tn_rate = specificity = tn / (tn + fp)
+        print('wskaźnik specyficzności:', specificity)
+        if tp + fn:
+            tp_rate = sensitivity = tp / (tp + fn)
+            print('wskaźnik czułości:', sensitivity)
+            gmean = (tp_rate * tn_rate) ** 0.5
+            print('wskaźnik średniej geometrycznej czułości i specyficzności:', gmean)
+        if fp + tp:
+            fp_rate = fp / (fp + tp)
+            auc = (1 + tp_rate - fp_rate)/2
+            print('AUC:', auc)
 
-def learn_and_test(learn_views, test_views):
-    probabilities, apost_complications, apost_symptoms = learn(learn_views)
-    real, predicted = test(test_views, probabilities, apost_complications, apost_symptoms)
-    stats = get_stats(real, predicted)
+
+def learn_and_test(learn_views, test_views, consensus_fun):
+
+    folds = get_folds(views, FOLD_NUMBER)
+    all_real = []
+    all_predicted = []
+    for i in range(len(folds)):
+        print('kroswalidacja fold: {}/{}'.format(i,FOLD_NUMBER))
+        test_views = folds[i]
+        learn_views = folds[:i] + folds[i+1:]
+
+
+
+        probabilities, apost_complications, apost_symptoms = learn(learn_views, consensus_fun)
+        real, predicted = test(test_views, probabilities, apost_complications, apost_symptoms)
+        all_real += real
+        all_predicted += predicted
+
+
+    stats = get_stats(all_real, all_predicted)
     show_stats(stats)
 
 
-folds = get_folds(views, FOLD_NUMBER)
-
-learn_and_test(views, views)
+print('\n\nconsensus opt 1\n')
+learn_and_test(views, views, compute_consensus_opt1)
+print('\n\nconsensus opt 2\n')
+learn_and_test(views, views, compute_consensus_opt2)

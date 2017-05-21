@@ -46,3 +46,289 @@ czestosc wystepowaia  powiklanie
 11 4
 12 2
 13 5
+
+
+nie                                 84.60 ['9.91', '64.72', '49.08', '32.93', '10.92', '0.44', '4.54', '6.86', '89.74', '1.00', '7.47', '0.48', '0.09']
+tak, krwotok i reoperacja           0.92 ['20.00', '60.00', '56.00', '36.00', '12.00', '0.00', '16.00', '8.00', '84.00', '0.00', '12.00', '0.00', '0.00']
+tak, zapalenie płuc                 0.30 ['12.50', '100.00', '25.00', '50.00', '50.00', '12.50', '12.50', '0.00', '75.00', '0.00', '0.00', '0.00', '12.50']
+tak, infekcja nerek                 0.48 ['23.08', '100.00', '0.00', '69.23', '46.15', '0.00', '38.46', '23.08', '76.92', '7.69', '7.69', '7.69', '0.00']
+tak, niewydolność krążenia          0.48 ['15.38', '92.31', '15.38', '76.92', '46.15', '7.69', '30.77', '7.69', '69.23', '0.00', '7.69', '0.00', '0.00']
+tak, niewydolność oddechowa         0.89 ['8.33', '91.67', '20.83', '66.67', '58.33', '8.33', '20.83', '4.17', '70.83', '4.17', '8.33', '0.00', '0.00']
+tak, niedoczynność przytarczyc      4.84 ['3.82', '66.41', '46.56', '36.64', '13.74', '1.53', '4.58', '5.34', '68.70', '7.63', '13.74', '0.00', '2.29']
+tak, porażenie strun jednostronne   8.27 ['6.25', '71.88', '40.18', '39.29', '15.18', '1.79', '6.25', '7.59', '85.27', '3.12', '9.82', '0.00', '0.45']
+tak, porażenie strun obustronne     1.03 ['3.57', '89.29', '35.71', '53.57', '21.43', '0.00', '7.14', '0.00', '92.86', '3.57', '3.57', '0.00', '0.00']
+tak, miejscowa infekcja rany        0.15 ['0.00', '100.00', '50.00', '50.00', '0.00', '0.00', '0.00', '0.00', '100.00', '0.00', '0.00', '0.00', '0.00']
+tak, zawał mięśnia sercowego        0.15 ['0.00', '100.00', '0.00', '75.00', '50.00', '0.00', '0.00', '0.00', '75.00', '0.00', '0.00', '0.00', '0.00']
+tak, udar mózgowy                   0.07 ['0.00', '100.00', '0.00', '100.00', '50.00', '0.00', '50.00', '0.00', '100.00', '0.00', '0.00', '0.00', '0.00']
+tak, zapalenie zz. głębokich        0.18 ['20.00', '80.00', '20.00', '60.00', '0.00', '0.00', '0.00', '0.00', '100.00', '0.00', '0.00', '0.00', '0.00']
+
+
+consensus opt 1
+
+nie
+ consensus : [0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D0|Sc)=84.94438423557227
+tak, krwotok i reoperacja
+ consensus : [0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D1|Sc)=0.6763930422896868
+tak, zapalenie płuc
+ consensus : [0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0] P(D2|Sc)=2.145121234944123
+tak, infekcja nerek
+ consensus : [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D3|Sc)=0.5761157136535678
+tak, niewydolność krążenia
+ consensus : [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D4|Sc)=0.723911552502387
+tak, niewydolność oddechowa
+ consensus : [0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0] P(D5|Sc)=8.739875122030902
+tak, niedoczynność przytarczyc
+ consensus : [0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D6|Sc)=3.3598540300614794
+tak, porażenie strun jednostronne
+ consensus : [0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D7|Sc)=8.480052058382975
+tak, porażenie strun obustronne
+ consensus : [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D8|Sc)=2.822165354348814
+tak, miejscowa infekcja rany
+ consensus : [0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D9|Sc)=0.6091509382864967
+tak, zawał mięśnia sercowego
+ consensus : [0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0] P(D10|Sc)=3.6594821234198793
+tak, udar mózgowy
+ consensus : [0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0] P(D11|Sc)=13.744234342178208
+tak, zapalenie zz. głębokich
+ consensus : [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D12|Sc)=0.8288453024304313
+
+
+consensus opt 2
+
+nie
+ consensus : [0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D0|Sc)=88.6375997413511
+tak, krwotok i reoperacja
+ consensus : [0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D1|Sc)=0.6763930422896868
+tak, zapalenie płuc
+ consensus : [0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0] P(D2|Sc)=1.3819862197370347
+tak, infekcja nerek
+ consensus : [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D3|Sc)=0.5761157136535678
+tak, niewydolność krążenia
+ consensus : [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D4|Sc)=0.723911552502387
+tak, niewydolność oddechowa
+ consensus : [0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0] P(D5|Sc)=8.739875122030902
+tak, niedoczynność przytarczyc
+ consensus : [0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D6|Sc)=3.3598540300614794
+tak, porażenie strun jednostronne
+ consensus : [0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D7|Sc)=8.480052058382975
+tak, porażenie strun obustronne
+ consensus : [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D8|Sc)=2.822165354348814
+tak, miejscowa infekcja rany
+ consensus : [0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D9|Sc)=0.6091509382864967
+tak, zawał mięśnia sercowego
+ consensus : [0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0] P(D10|Sc)=3.6594821234198793
+tak, udar mózgowy
+ consensus : [0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0] P(D11|Sc)=1.6264364992977238
+tak, zapalenie zz. głębokich
+ consensus : [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D12|Sc)=0.8288453024304313
+
+
+
+
+consensus opt 1
+
+kroswalidacja fold=0/10
+kroswalidacja fold=1/10
+kroswalidacja fold=2/10
+kroswalidacja fold=3/10
+kroswalidacja fold=4/10
+kroswalidacja fold=5/10
+kroswalidacja fold=6/10
+kroswalidacja fold=7/10
+kroswalidacja fold=8/10
+kroswalidacja fold=9/10
+
+komplikacja 0
+poprawność klasyfikacji: 0.5917990395271518
+wskaźnik specyficzności: 0.5275779376498801
+wskaźnik czułości: 0.6034934497816594
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5642604271265347
+AUC: 0.7393654709326283
+
+komplikacja 1
+poprawność klasyfikacji: 0.3708902844477281
+wskaźnik specyficzności: 0.3668903803131991
+wskaźnik czułości: 0.8
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5417677585927011
+AUC: 0.40582072176949946
+
+komplikacja 2
+poprawność klasyfikacji: 0.9371998522349464
+wskaźnik specyficzności: 0.9381252315672471
+wskaźnik czułości: 0.625
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7657207517950192
+AUC: 0.32703488372093026
+
+komplikacja 3
+poprawność klasyfikacji: 0.65718507572959
+wskaźnik specyficzności: 0.655902004454343
+wskaźnik czułości: 0.9230769230769231
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7781053939613202
+AUC: 0.46792823789628907
+
+komplikacja 4
+poprawność klasyfikacji: 0.6834133727373476
+wskaźnik specyficzności: 0.6826280623608018
+wskaźnik czułości: 0.8461538461538461
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7600055002821624
+AUC: 0.4294279623378931
+
+komplikacja 5
+poprawność klasyfikacji: 0.9275951237532324
+wskaźnik specyficzności: 0.931420052180395
+wskaźnik czułości: 0.5
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.6824295026522502
+AUC: 0.28061224489795916
+
+komplikacja 6
+poprawność klasyfikacji: 0.597709641669745
+wskaźnik specyficzności: 0.5993788819875776
+wskaźnik czułości: 0.5648854961832062
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5818766511497846
+AUC: 0.3158966359758707
+
+komplikacja 7
+poprawność klasyfikacji: 0.5906908016254155
+wskaźnik specyficzności: 0.5984695932339912
+wskaźnik czułości: 0.5044642857142857
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5494602222841108
+AUC: 0.3031330437580437
+
+komplikacja 8
+poprawność klasyfikacji: 0.7768747691171038
+wskaźnik specyficzności: 0.780515117581187
+wskaźnik czułości: 0.42857142857142855
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5783653507631364
+AUC: 0.2242857142857143
+
+komplikacja 9
+poprawność klasyfikacji: 0.9985223494643517
+wskaźnik specyficzności: 1.0
+wskaźnik czułości: 0.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.0
+
+komplikacja 10
+poprawność klasyfikacji: 0.958625785001847
+wskaźnik specyficzności: 0.9596744358120607
+wskaźnik czułości: 0.25
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.48981487212314734
+AUC: 0.12954545454545452
+
+komplikacja 11
+poprawność klasyfikacji: 0.990764684152198
+wskaźnik specyficzności: 0.9911275415896488
+wskaźnik czułości: 0.5
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7039629044167203
+AUC: 0.27
+
+komplikacja 12
+poprawność klasyfikacji: 0.8223125230882896
+wskaźnik specyficzności: 0.8227239082161362
+wskaźnik czułości: 0.6
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7025911648531326
+AUC: 0.3031120331950208
+
+
+consensus opt 2
+
+kroswalidacja fold=0/10
+kroswalidacja fold=1/10
+kroswalidacja fold=2/10
+kroswalidacja fold=3/10
+kroswalidacja fold=4/10
+kroswalidacja fold=5/10
+kroswalidacja fold=6/10
+kroswalidacja fold=7/10
+kroswalidacja fold=8/10
+kroswalidacja fold=9/10
+
+komplikacja 0
+poprawność klasyfikacji: 0.5613594384927965
+wskaźnik specyficzności: 0.5611510791366906
+wskaźnik czułości: 0.5613973799126638
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.561274216014331
+AUC: 0.718394454630171
+
+komplikacja 1
+poprawność klasyfikacji: 0.3708902844477281
+wskaźnik specyficzności: 0.3668903803131991
+wskaźnik czułości: 0.8
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5417677585927011
+AUC: 0.40582072176949946
+
+komplikacja 2
+poprawność klasyfikacji: 0.8266715921684522
+wskaźnik specyficzności: 0.8271952575027788
+wskaźnik czułości: 0.65
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7332645616534365
+AUC: 0.33051314673452076
+
+komplikacja 3
+poprawność klasyfikacji: 0.65718507572959
+wskaźnik specyficzności: 0.655902004454343
+wskaźnik czułości: 0.9230769230769231
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7781053939613202
+AUC: 0.46792823789628907
+
+komplikacja 4
+poprawność klasyfikacji: 0.6834133727373476
+wskaźnik specyficzności: 0.6826280623608018
+wskaźnik czułości: 0.8461538461538461
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7600055002821624
+AUC: 0.4294279623378931
+
+komplikacja 5
+poprawność klasyfikacji: 0.9275951237532324
+wskaźnik specyficzności: 0.931420052180395
+wskaźnik czułości: 0.5
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.6824295026522502
+AUC: 0.28061224489795916
+
+komplikacja 6
+poprawność klasyfikacji: 0.597709641669745
+wskaźnik specyficzności: 0.5993788819875776
+wskaźnik czułości: 0.5648854961832062
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5818766511497846
+AUC: 0.3158966359758707
+
+komplikacja 7
+poprawność klasyfikacji: 0.5906908016254155
+wskaźnik specyficzności: 0.5984695932339912
+wskaźnik czułości: 0.5044642857142857
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5494602222841108
+AUC: 0.3031330437580437
+
+komplikacja 8
+poprawność klasyfikacji: 0.7685999261174732
+wskaźnik specyficzności: 0.7720418066442702
+wskaźnik czułości: 0.4392857142857143
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5823632341504412
+AUC: 0.22951444622792938
+
+komplikacja 9
+poprawność klasyfikacji: 0.8433690432212781
+wskaźnik specyficzności: 0.8440251572327044
+wskaźnik czułości: 0.4
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5810422212654446
+AUC: 0.20189035916824194
+
+komplikacja 10
+poprawność klasyfikacji: 0.9236054673069819
+wskaźnik specyficzności: 0.9243803181650019
+wskaźnik czułości: 0.4
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.6080724687617429
+AUC: 0.20388349514563103
+
+komplikacja 11
+poprawność klasyfikacji: 0.9281492427041005
+wskaźnik specyficzności: 0.9283918669131238
+wskaźnik czułości: 0.6
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7463478546548347
+AUC: 0.30307850179579277
+
+komplikacja 12
+poprawność klasyfikacji: 0.8223125230882896
+wskaźnik specyficzności: 0.8227239082161362
+wskaźnik czułości: 0.6
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7025911648531326
+AUC: 0.3031120331950208
