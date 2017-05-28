@@ -4,7 +4,7 @@ database_path = 'C:\\Users\\Monika\\Desktop\\baza.mdb'
 connection = pypyodbc.win_connect_mdb(database_path)
 cursor = connection.cursor()
 
-caseS_TABLE_NAME = 'Pacjent'
+PATIENT_TABLE_NAME = 'Pacjent'
 COMPLICATIONS_TABLE_NAME = 'PowiklaniaPooperacyjne'
 ADDITIONAL_DISEASES_TABLE_NAME = 'ChorobyWspolistniejace'
 COMPLICATIONS_DICT_TABLE_NAME = 'Slownik_PowiklaniaPooperacyjne'
@@ -21,6 +21,7 @@ ADDITIONAL_DISEASES = 'ChorobyWspolistniejace'
 
 COMPLICATION = 'powiklanie'
 
+
 def get_complications_dict():
     cursor.execute('SELECT * FROM {};'.format(COMPLICATIONS_DICT_TABLE_NAME))
     complications_dict = {}
@@ -28,14 +29,7 @@ def get_complications_dict():
         complications_dict[t[0]] = t[1]
 
     return complications_dict
-#
-# def get_complications_dict():
-#     cursor.execute('SELECT * FROM {};'.format(COMPLICATIONS_DICT_TABLE_NAME))
-#     complications_dict = {}
-#     for t in cursor.fetchall():
-#         complications_dict[t[0]] = t[1]
-#
-#     return complications_dict
+
 
 def create_case_dicts(data_tuple):
     case_dict = dict()
@@ -59,9 +53,6 @@ def get_case_data_from_table(table_name, case_dict, items_to_get=2, prefix_name=
                            prefix_name + YEAR, case_dict[YEAR]))
 
     fa = cursor.fetchall()
-    # #print(fa)
-    # if not fa:
-    #     raise Exception(fa)
     for c in fa:
         if isinstance(items_to_get, list):
             for index in items_to_get:
@@ -77,21 +68,23 @@ def get_case_data_from_table(table_name, case_dict, items_to_get=2, prefix_name=
 def get_cases():
     connection = pypyodbc.win_connect_mdb(database_path)
     cursor = connection.cursor()
-    cursor.execute('select * from {};'.format(caseS_TABLE_NAME))
+    cursor.execute('select * from {};'.format(PATIENT_TABLE_NAME))
     cases_data = cursor.fetchall()
     cases = []
     n = len(cases_data)
     i = 0
-    d = int(n/100)
+    d = int(n / 100)
     print('wczytywanie danych z bazy')
+
     for pd in cases_data:
         i += 1
         if (i % d) == 0:
-            print('{}%'.format(int(i*100/n)))
+            print('{}%'.format(int(i * 100 / n)))
         cases.append(create_case_dicts(pd))
     print('zakonczono wczytywanie danych z bazy')
     connection.close()
     return cases
+
 
 def print_stats(cases, type_name):
     d = {}
@@ -104,8 +97,7 @@ def print_stats(cases, type_name):
         print(x, y)
 
 
-
-def get_views(cases, filter_additional_diseases, filter_operation_type,filter_complications):
+def get_views(cases, filter_additional_diseases, filter_operation_type, filter_complications):
     outs = []
 
     for c in cases:
@@ -122,8 +114,28 @@ def get_views(cases, filter_additional_diseases, filter_operation_type,filter_co
     return outs
 
 
-# views = get_views(cases,
-#                   filter_additional_diseases=[3, 4, 7],
-#                   filter_operation_type=[1, 3],
-#                   filter_complications=[1, 9, 7]
-#                   )
+# def get_cases_with_complication(complication_number, number_of_complications, views):
+#     cases_with_complication = []
+#     for v in views:
+#         if v[-number_of_complications + complication_number]:
+#             cases_with_complication.append(v)
+#
+#     return cases_with_complication
+
+
+def get_symptom_vectors_for_given_complication(complication_number, number_of_complications, views):
+    number_of_symptoms = len(views[0]) - number_of_complications
+    symptom_vectors_with_complication = []
+    for v in views:
+        if v[number_of_symptoms + complication_number]:
+            symptom_vectors_with_complication.append(v[:number_of_symptoms])
+
+    return symptom_vectors_with_complication
+
+# def get_cases_by_complication(views, number_of_complications):
+#     cases_by_complication =[]
+#     for i in range(number_of_complications):
+#         cases_by_complication.append(get_cases_with_complication(i, number_of_complications, views))
+#
+#     return cases_by_complication
+

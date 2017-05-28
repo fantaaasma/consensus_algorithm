@@ -1,4 +1,5 @@
 import numpy as np
+
 data = np.array([
     [0, 1, 0],
     [0, 1, 1],
@@ -30,7 +31,6 @@ def print_list(s, msg=''):
 
 
 class BernoulliNB(object):
-
     def __init__(self, data1, data2):
         self.alpha = 1.0
         X = []
@@ -45,7 +45,6 @@ class BernoulliNB(object):
 
         self.fit(np.array(X), np.array(y))
 
-
     def fit(self, X, y):
         count_sample = X.shape[0]
         separated = [[x for x, t in zip(X, y) if t == c] for c in np.unique(y)]
@@ -59,7 +58,7 @@ class BernoulliNB(object):
     def predict_log_proba(self, X):
         return [(np.log(self.feature_prob_) * x + \
                  np.log(1 - self.feature_prob_) * np.abs(x - 1)
-                ).sum(axis=1) + self.class_log_prior_ for x in X]
+                 ).sum(axis=1) + self.class_log_prior_ for x in X]
 
     def get_probabilities(self, input_vector):
         X = np.array([input_vector])
