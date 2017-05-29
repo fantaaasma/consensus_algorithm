@@ -1,6 +1,5 @@
 def get_folds(views, fold_nuber):
     folds = [[]] * fold_nuber
-    # TODO change to random
     for i in range(len(views)):
         folds[i % fold_nuber].append(views[i])
     return folds

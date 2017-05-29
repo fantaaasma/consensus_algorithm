@@ -1,34 +1,5 @@
 import numpy as np
 
-data = np.array([
-    [0, 1, 0],
-    [0, 1, 1],
-    [0, 0, 1],
-    [1, 0, 0],
-    [1, 1, 0],
-    [1, 0, 1]
-])
-
-complications = np.array([
-    0,
-    0,
-    0,
-    1,
-    1,
-    1
-])
-
-data_set = []
-
-for i in range(len(data)):
-    data_set.append(data[i] + [complications[i]])
-
-
-def print_list(s, msg=''):
-    print(msg)
-    for e in s:
-        print(e)
-
 
 class BernoulliNB(object):
     def __init__(self, data1, data2):

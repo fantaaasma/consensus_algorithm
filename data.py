@@ -114,15 +114,6 @@ def get_views(cases, filter_additional_diseases, filter_operation_type, filter_c
     return outs
 
 
-# def get_cases_with_complication(complication_number, number_of_complications, views):
-#     cases_with_complication = []
-#     for v in views:
-#         if v[-number_of_complications + complication_number]:
-#             cases_with_complication.append(v)
-#
-#     return cases_with_complication
-
-
 def get_symptom_vectors_for_given_complication(complication_number, number_of_complications, views):
     number_of_symptoms = len(views[0]) - number_of_complications
     symptom_vectors_with_complication = []
@@ -131,11 +122,3 @@ def get_symptom_vectors_for_given_complication(complication_number, number_of_co
             symptom_vectors_with_complication.append(v[:number_of_symptoms])
 
     return symptom_vectors_with_complication
-
-# def get_cases_by_complication(views, number_of_complications):
-#     cases_by_complication =[]
-#     for i in range(number_of_complications):
-#         cases_by_complication.append(get_cases_with_complication(i, number_of_complications, views))
-#
-#     return cases_by_complication
-
