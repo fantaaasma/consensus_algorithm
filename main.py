@@ -20,8 +20,7 @@ number_of_symptoms = len(views[0]) - NUMBER_OF_COMPLICATIONS
 method_functions = [
     method_1,
     method_2,
-    method_3,
-    method_4
+    method_3
 ]
 
 consensus_functions = [
@@ -32,3 +31,6 @@ consensus_functions = [
 for method in method_functions:
     for consensus_function in consensus_functions:
         check_method(method, views, consensus_function, NUMBER_OF_FOLDS, NUMBER_OF_COMPLICATIONS)
+
+
+check_method(method_4, views, None, NUMBER_OF_FOLDS, NUMBER_OF_COMPLICATIONS)
