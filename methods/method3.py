@@ -12,7 +12,7 @@ def method_3(learn_data, test_data, number_of_complications, consensus_fun):
     return real, predicted
 
 
-method_3.name = 'metoda 3'
+method_3.name = '3. consensus + prawdopodobienstwo bayesa'
 
 
 def compute_probabilities(consensuses, views, apost_complications, apost_symptoms):

@@ -4,30 +4,6 @@ THRESHOLD = 0.1
 
 
 def test(data, consensuses, number_of_complications):
-    # real = []
-    # predicted = []
-    #
-    # for patient in data:
-    #     real.append(patient[-number_of_complications:])
-    #     predicted_complications = [1] * number_of_complications
-    #     symptoms = patient[:-number_of_complications]
-    #
-    #     for i in range(len(consensuses)):
-    #
-    #         a = distance_less_than_threshold(symptoms, consensuses[i])
-    #         b = symptoms == consensuses[i]
-    #
-    #         if a != b:
-    #             print(a,b)
-    #
-    #
-    #
-    #         if distance_less_than_threshold(symptoms, consensuses[i]):
-    #             predicted_complications[i] = 1
-    #
-    #     predicted.append(predicted_complications)
-    #
-    # return real, predicted
     real = []
     predicted = []
 
@@ -37,7 +13,7 @@ def test(data, consensuses, number_of_complications):
         symptoms = patient[:-number_of_complications]
 
         for i in range(len(consensuses)):
-            if consensuses[i] == symptoms:
+            if distance_less_than_threshold(consensuses[i], symptoms):
                 predicted_complications[i] = 1
 
         predicted.append(predicted_complications)
@@ -46,7 +22,7 @@ def test(data, consensuses, number_of_complications):
 
 
 def distance_less_than_threshold(a, b):
-    return distance(a, b)/len(a) <= THRESHOLD
+    return (distance(a, b)/len(a)) <= THRESHOLD
 
 
 def method_2(learn_data, test_data, number_of_complications, consensus_fun):
@@ -55,4 +31,4 @@ def method_2(learn_data, test_data, number_of_complications, consensus_fun):
     return real, predicted
 
 
-method_2.name = 'metoda 2'
+method_2.name = '2. konsensus + odległość hamminga (próg={})'.format(THRESHOLD)

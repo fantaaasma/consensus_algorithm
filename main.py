@@ -4,6 +4,7 @@ from consensus_algorithm.data import get_views, get_cases
 from consensus_algorithm.methods.method1 import method_1
 from consensus_algorithm.methods.method2 import method_2
 from consensus_algorithm.methods.method3 import method_3
+from consensus_algorithm.methods.method4 import method_4
 
 NUMBER_OF_COMPLICATIONS = 13
 NUMBER_OF_FOLDS = 10
@@ -19,7 +20,8 @@ number_of_symptoms = len(views[0]) - NUMBER_OF_COMPLICATIONS
 method_functions = [
     method_1,
     method_2,
-    method_3
+    method_3,
+    method_4
 ]
 
 consensus_functions = [
