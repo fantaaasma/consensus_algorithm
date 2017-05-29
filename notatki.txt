@@ -130,21 +130,541 @@ tak, udar mózgowy
 tak, zapalenie zz. głębokich
  consensus : [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] P(D12|Sc)=0.8288453024304313
 
+wczytywanie danych z bazy
+0%
+1%
+2%
+3%
+4%
+5%
+6%
+7%
+8%
+9%
+10%
+11%
+12%
+13%
+14%
+15%
+16%
+17%
+18%
+19%
+20%
+21%
+22%
+23%
+24%
+25%
+26%
+27%
+28%
+29%
+30%
+31%
+32%
+33%
+34%
+35%
+36%
+37%
+38%
+39%
+40%
+41%
+42%
+43%
+44%
+45%
+46%
+47%
+48%
+49%
+50%
+51%
+52%
+53%
+54%
+55%
+56%
+57%
+58%
+59%
+60%
+61%
+62%
+63%
+64%
+65%
+66%
+67%
+68%
+69%
+70%
+71%
+72%
+73%
+74%
+75%
+76%
+77%
+78%
+79%
+80%
+81%
+82%
+83%
+84%
+85%
+86%
+87%
+88%
+89%
+90%
+91%
+92%
+93%
+94%
+95%
+96%
+97%
+98%
+99%
+zakonczono wczytywanie danych z bazy
+--------------------
+nazwa metody: 1. tylko porówannie z konsensusem
+konsensus spelniajacy kryterium: opt-1
 
+walidacja krzyżowa fold: 0/10
+walidacja krzyżowa fold: 1/10
+walidacja krzyżowa fold: 2/10
+walidacja krzyżowa fold: 3/10
+walidacja krzyżowa fold: 4/10
+walidacja krzyżowa fold: 5/10
+walidacja krzyżowa fold: 6/10
+walidacja krzyżowa fold: 7/10
+walidacja krzyżowa fold: 8/10
+walidacja krzyżowa fold: 9/10
 
+komplikacja 0
+poprawność klasyfikacji: 0.18544514222386405
+wskaźnik specyficzności: 0.9424460431654677
+wskaźnik czułości: 0.04759825327510917
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.211798926958364
+AUC: 0.43357356272778014
 
-consensus opt 1
+komplikacja 1
+poprawność klasyfikacji: 0.8104913188031031
+wskaźnik specyficzności: 0.8165548098434005
+wskaźnik czułości: 0.16
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.36145368939180034
+AUC: 0.08403225806451609
 
-kroswalidacja fold=0/10
-kroswalidacja fold=1/10
-kroswalidacja fold=2/10
-kroswalidacja fold=3/10
-kroswalidacja fold=4/10
-kroswalidacja fold=5/10
-kroswalidacja fold=6/10
-kroswalidacja fold=7/10
-kroswalidacja fold=8/10
-kroswalidacja fold=9/10
+komplikacja 2
+poprawność klasyfikacji: 0.9589951976357591
+wskaźnik specyficzności: 0.9610967024824009
+wskaźnik czułości: 0.25
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.4901776980041016
+AUC: 0.13434579439252337
+
+komplikacja 3
+poprawność klasyfikacji: 0.8396749168821573
+wskaźnik specyficzności: 0.8422420193021529
+wskaźnik czułości: 0.3076923076923077
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5090691412318258
+AUC: 0.15850815850815853
+
+komplikacja 4
+poprawność klasyfikacji: 0.838197266346509
+wskaźnik specyficzności: 0.8414996288047513
+wskaźnik czułości: 0.15384615384615385
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.35980756155836574
+AUC: 0.07925407925407918
+
+komplikacja 5
+poprawność klasyfikacji: 0.9560398965644625
+wskaźnik specyficzności: 0.9623555721207604
+wskaźnik czułości: 0.25
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.49049861674645945
+AUC: 0.1530373831775701
+
+komplikacja 6
+poprawność klasyfikacji: 0.9061691909863318
+wskaźnik specyficzności: 0.9503105590062112
+wskaźnik czułości: 0.03816793893129771
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.1904505063839854
+AUC: 0.037880961946851865
+
+komplikacja 7
+poprawność klasyfikacji: 0.8792020687107499
+wskaźnik specyficzności: 0.9524768425291985
+wskaźnik czułości: 0.06696428571428571
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.25255084917569764
+AUC: 0.08987312030075195
+
+komplikacja 8
+poprawność klasyfikacji: 0.8370890284447728
+wskaźnik specyficzności: 0.8428518103770063
+wskaźnik czułości: 0.2857142857142857
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.49072884871877964
+AUC: 0.15218115218115214
+
+komplikacja 9
+poprawność klasyfikacji: 0.9985223494643517
+wskaźnik specyficzności: 1.0
+wskaźnik czułości: 0.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.0
+
+komplikacja 10
+poprawność klasyfikacji: 0.9597340229035833
+wskaźnik specyficzności: 0.9607843137254902
+wskaźnik czułości: 0.25
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.49009802940980346
+AUC: 0.12967289719626168
+
+komplikacja 11
+poprawność klasyfikacji: 0.990764684152198
+wskaźnik specyficzności: 0.9911275415896488
+wskaźnik czułości: 0.5
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7039629044167203
+AUC: 0.27
+
+komplikacja 12
+poprawność klasyfikacji: 0.8411525674178056
+wskaźnik specyficzności: 0.8419689119170984
+wskaźnik czułości: 0.4
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5803340113821001
+AUC: 0.20233100233100226
+--------------------
+nazwa metody: 1. tylko porówannie z konsensusem
+konsensus spelniajacy kryterium: opt-2
+
+walidacja krzyżowa fold: 0/10
+walidacja krzyżowa fold: 1/10
+walidacja krzyżowa fold: 2/10
+walidacja krzyżowa fold: 3/10
+walidacja krzyżowa fold: 4/10
+walidacja krzyżowa fold: 5/10
+walidacja krzyżowa fold: 6/10
+walidacja krzyżowa fold: 7/10
+walidacja krzyżowa fold: 8/10
+walidacja krzyżowa fold: 9/10
+
+komplikacja 0
+poprawność klasyfikacji: 0.24684152198005171
+wskaźnik specyficzności: 0.8805755395683453
+wskaźnik czułości: 0.1314410480349345
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.34021136341220476
+AUC: 0.4947399082820054
+
+komplikacja 1
+poprawność klasyfikacji: 0.8236793498337643
+wskaźnik specyficzności: 0.8299776286353467
+wskaźnik czułości: 0.148
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.3504806542992513
+AUC: 0.07802436371546656
+
+komplikacja 2
+poprawność klasyfikacji: 0.955596601403768
+wskaźnik specyficzności: 0.9583178955168581
+wskaźnik czułości: 0.0375
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.1895703591859291
+AUC: 0.02007978723404258
+
+komplikacja 3
+poprawność klasyfikacji: 0.8539711858145549
+wskaźnik specyficzności: 0.8567557535263549
+wskaźnik czułości: 0.27692307692307694
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.4870887387715585
+AUC: 0.14308284783252684
+
+komplikacja 4
+poprawność klasyfikacji: 0.838197266346509
+wskaźnik specyficzności: 0.8414996288047513
+wskaźnik czułości: 0.15384615384615385
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.35980756155836574
+AUC: 0.07925407925407918
+
+komplikacja 5
+poprawność klasyfikacji: 0.9560398965644625
+wskaźnik specyficzności: 0.9623555721207604
+wskaźnik czułości: 0.25
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.49049861674645945
+AUC: 0.1530373831775701
+
+komplikacja 6
+poprawność klasyfikacji: 0.8450314000738826
+wskaźnik specyficzności: 0.8829580745341615
+wskaźnik czułości: 0.09923664122137404
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.2960097864194051
+AUC: 0.07028604716076653
+
+komplikacja 7
+poprawność klasyfikacji: 0.8792020687107499
+wskaźnik specyficzności: 0.9524768425291985
+wskaźnik czułości: 0.06696428571428571
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.25255084917569764
+AUC: 0.08987312030075195
+
+komplikacja 8
+poprawność klasyfikacji: 0.8895456224602881
+wskaźnik specyficzności: 0.896976483762598
+wskaźnik czułości: 0.17857142857142858
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.4002179057719231
+AUC: 0.09818251143873924
+
+komplikacja 9
+poprawność klasyfikacji: 0.9886959734022903
+wskaźnik specyficzności: 0.9901590825009249
+wskaźnik czułości: 0.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.0
+AUC: 0.0
+
+komplikacja 10
+poprawność klasyfikacji: 0.9121536756557074
+wskaźnik specyficzności: 0.913133555308916
+wskaźnik czułości: 0.25
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.47779010959544677
+AUC: 0.12712044105173875
+
+komplikacja 11
+poprawność klasyfikacji: 0.9732175840413743
+wskaźnik specyficzności: 0.9739371534195933
+wskaźnik czułości: 0.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.0
+AUC: 0.0
+
+komplikacja 12
+poprawność klasyfikacji: 0.8411525674178056
+wskaźnik specyficzności: 0.8419689119170984
+wskaźnik czułości: 0.4
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5803340113821001
+AUC: 0.20233100233100226
+--------------------
+nazwa metody: 2. konsensus + odległość hamminga (próg=0.1)
+konsensus spelniajacy kryterium: opt-1
+
+walidacja krzyżowa fold: 0/10
+walidacja krzyżowa fold: 1/10
+walidacja krzyżowa fold: 2/10
+walidacja krzyżowa fold: 3/10
+walidacja krzyżowa fold: 4/10
+walidacja krzyżowa fold: 5/10
+walidacja krzyżowa fold: 6/10
+walidacja krzyżowa fold: 7/10
+walidacja krzyżowa fold: 8/10
+walidacja krzyżowa fold: 9/10
+
+komplikacja 0
+poprawność klasyfikacji: 0.47949759881787957
+wskaźnik specyficzności: 0.5419664268585132
+wskaźnik czułości: 0.46812227074235807
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5036929167728382
+AUC: 0.6584475170022163
+
+komplikacja 1
+poprawność klasyfikacji: 0.5356483191725157
+wskaźnik specyficzności: 0.5361670395227442
+wskaźnik czułości: 0.48
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.507306789793826
+AUC: 0.24477707006369426
+
+komplikacja 2
+poprawność klasyfikacji: 0.7598817879571481
+wskaźnik specyficzności: 0.7613931085587254
+wskaźnik czułości: 0.25
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.4362892127244053
+AUC: 0.1265479876160991
+
+komplikacja 3
+poprawność klasyfikacji: 0.6856298485408201
+wskaźnik specyficzności: 0.6870824053452116
+wskaźnik czułości: 0.38461538461538464
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5140646492361755
+AUC: 0.19525580551523947
+
+komplikacja 4
+poprawność klasyfikacji: 0.6863686738086443
+wskaźnik specyficzności: 0.6874536005939124
+wskaźnik czułości: 0.46153846153846156
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5632817032331072
+AUC: 0.23430696661828743
+
+komplikacja 5
+poprawność klasyfikacji: 0.7606206132249723
+wskaźnik specyficzności: 0.76332463660082
+wskaźnik czułości: 0.4583333333333333
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5914872146620831
+AUC: 0.2376805985552115
+
+komplikacja 6
+poprawność klasyfikacji: 0.5264130033247137
+wskaźnik specyficzności: 0.531444099378882
+wskaźnik czułości: 0.42748091603053434
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.4766363502939183
+AUC: 0.23590989586166466
+
+komplikacja 7
+poprawność klasyfikacji: 0.5289988917620982
+wskaźnik specyficzności: 0.5340314136125655
+wskaźnik czułości: 0.4732142857142857
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5027039824207288
+AUC: 0.2785707216378237
+
+komplikacja 8
+poprawność klasyfikacji: 0.6874769117103805
+wskaźnik specyficzności: 0.689063083240015
+wskaźnik czułości: 0.5357142857142857
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.6075696976067915
+AUC: 0.2767014824797843
+
+komplikacja 9
+poprawność klasyfikacji: 0.6597709641669746
+wskaźnik specyficzności: 0.6592674805771365
+wskaźnik czułości: 1.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.8119528807616464
+AUC: 0.5021621621621621
+
+komplikacja 10
+poprawność klasyfikacji: 0.7620982637606206
+wskaźnik specyficzności: 0.7621161672216056
+wskaźnik czułości: 0.75
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7560338123498209
+AUC: 0.37732198142414863
+
+komplikacja 11
+poprawność klasyfikacji: 0.9335057258958256
+wskaźnik specyficzności: 0.933826247689464
+wskaźnik czułości: 0.5
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.683310415437034
+AUC: 0.25277777777777777
+
+komplikacja 12
+poprawność klasyfikacji: 0.6871074990764684
+wskaźnik specyficzności: 0.6872686898593634
+wskaźnik czułości: 0.6
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.6421535750236216
+AUC: 0.30176886792452834
+--------------------
+nazwa metody: 2. konsensus + odległość hamminga (próg=0.1)
+konsensus spelniajacy kryterium: opt-2
+
+walidacja krzyżowa fold: 0/10
+walidacja krzyżowa fold: 1/10
+walidacja krzyżowa fold: 2/10
+walidacja krzyżowa fold: 3/10
+walidacja krzyżowa fold: 4/10
+walidacja krzyżowa fold: 5/10
+walidacja krzyżowa fold: 6/10
+walidacja krzyżowa fold: 7/10
+walidacja krzyżowa fold: 8/10
+walidacja krzyżowa fold: 9/10
+
+komplikacja 0
+poprawność klasyfikacji: 0.4898411525674178
+wskaźnik specyficzności: 0.5822541966426859
+wskaźnik czułości: 0.4730131004366812
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5247988784250838
+AUC: 0.667236628156944
+
+komplikacja 1
+poprawność klasyfikacji: 0.5356483191725157
+wskaźnik specyficzności: 0.5361670395227442
+wskaźnik czułości: 0.48
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.507306789793826
+AUC: 0.24477707006369426
+
+komplikacja 2
+poprawność klasyfikacji: 0.807277428888068
+wskaźnik specyficzności: 0.8085216746943312
+wskaźnik czułości: 0.3875
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5597339983814217
+AUC: 0.19673134256587804
+
+komplikacja 3
+poprawność klasyfikacji: 0.6982637606206132
+wskaźnik specyficzności: 0.6998144023756496
+wskaźnik czułości: 0.3769230769230769
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.513591469768058
+AUC: 0.1914728462294834
+
+komplikacja 4
+poprawność klasyfikacji: 0.6937569264868858
+wskaźnik specyficzności: 0.6949146250927988
+wskaźnik czułości: 0.45384615384615384
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5615908918864414
+AUC: 0.23048673964354077
+
+komplikacja 5
+poprawność klasyfikacji: 0.7606206132249723
+wskaźnik specyficzności: 0.76332463660082
+wskaźnik czułości: 0.4583333333333333
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5914872146620831
+AUC: 0.2376805985552115
+
+komplikacja 6
+poprawność klasyfikacji: 0.525748060583672
+wskaźnik specyficzności: 0.5319099378881987
+wskaźnik czułości: 0.40458015267175573
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.46389675993525925
+AUC: 0.22334187169653885
+
+komplikacja 7
+poprawność klasyfikacji: 0.5289988917620982
+wskaźnik specyficzności: 0.5340314136125655
+wskaźnik czułości: 0.4732142857142857
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5027039824207288
+AUC: 0.2785707216378237
+
+komplikacja 8
+poprawność klasyfikacji: 0.566605097894348
+wskaźnik specyficzności: 0.5660321015304218
+wskaźnik czułości: 0.6214285714285714
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5930839065737344
+AUC: 0.31808716707021795
+
+komplikacja 9
+poprawność klasyfikacji: 0.5723679349833765
+wskaźnik specyficzności: 0.5717351091379949
+wskaźnik czułości: 1.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7561316744707861
+AUC: 0.5017217630853994
+
+komplikacja 10
+poprawność klasyfikacji: 0.7546361285555966
+wskaźnik specyficzności: 0.7546429892711801
+wskaźnik czułości: 0.75
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7523179128223554
+AUC: 0.3772515761032723
+
+komplikacja 11
+poprawność klasyfikacji: 0.7778352419652752
+wskaźnik specyficzności: 0.7776709796672828
+wskaźnik czułości: 1.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.8818565527722084
+AUC: 0.5016572754391779
+
+komplikacja 12
+poprawność klasyfikacji: 0.6871074990764684
+wskaźnik specyficzności: 0.6872686898593634
+wskaźnik czułości: 0.6
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.6421535750236216
+AUC: 0.30176886792452834
+--------------------
+nazwa metody: 3. consensus + prawdopodobienstwo bayesa
+konsensus spelniajacy kryterium: opt-1
+
+walidacja krzyżowa fold: 0/10
+walidacja krzyżowa fold: 1/10
+walidacja krzyżowa fold: 2/10
+walidacja krzyżowa fold: 3/10
+walidacja krzyżowa fold: 4/10
+walidacja krzyżowa fold: 5/10
+walidacja krzyżowa fold: 6/10
+walidacja krzyżowa fold: 7/10
+walidacja krzyżowa fold: 8/10
+walidacja krzyżowa fold: 9/10
 
 komplikacja 0
 poprawność klasyfikacji: 0.5917990395271518
@@ -235,55 +755,55 @@ wskaźnik specyficzności: 0.8227239082161362
 wskaźnik czułości: 0.6
 wskaźnik średniej geometrycznej czułości i specyficzności: 0.7025911648531326
 AUC: 0.3031120331950208
+--------------------
+nazwa metody: 3. consensus + prawdopodobienstwo bayesa
+konsensus spelniajacy kryterium: opt-2
 
-
-consensus opt 2
-
-kroswalidacja fold=0/10
-kroswalidacja fold=1/10
-kroswalidacja fold=2/10
-kroswalidacja fold=3/10
-kroswalidacja fold=4/10
-kroswalidacja fold=5/10
-kroswalidacja fold=6/10
-kroswalidacja fold=7/10
-kroswalidacja fold=8/10
-kroswalidacja fold=9/10
+walidacja krzyżowa fold: 0/10
+walidacja krzyżowa fold: 1/10
+walidacja krzyżowa fold: 2/10
+walidacja krzyżowa fold: 3/10
+walidacja krzyżowa fold: 4/10
+walidacja krzyżowa fold: 5/10
+walidacja krzyżowa fold: 6/10
+walidacja krzyżowa fold: 7/10
+walidacja krzyżowa fold: 8/10
+walidacja krzyżowa fold: 9/10
 
 komplikacja 0
-poprawność klasyfikacji: 0.5613594384927965
-wskaźnik specyficzności: 0.5611510791366906
-wskaźnik czułości: 0.5613973799126638
-wskaźnik średniej geometrycznej czułości i specyficzności: 0.561274216014331
-AUC: 0.718394454630171
+poprawność klasyfikacji: 0.5385297377170299
+wskaźnik specyficzności: 0.5863309352517986
+wskaźnik czułości: 0.529825327510917
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5573625209857284
+AUC: 0.7026742455132879
 
 komplikacja 1
-poprawność klasyfikacji: 0.3708902844477281
-wskaźnik specyficzności: 0.3668903803131991
-wskaźnik czułości: 0.8
-wskaźnik średniej geometrycznej czułości i specyficzności: 0.5417677585927011
-AUC: 0.40582072176949946
+poprawność klasyfikacji: 0.3157000369412634
+wskaźnik specyficzności: 0.31088739746457866
+wskaźnik czułości: 0.832
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5085846190070334
+AUC: 0.4215644729802032
 
 komplikacja 2
-poprawność klasyfikacji: 0.8266715921684522
-wskaźnik specyficzności: 0.8271952575027788
-wskaźnik czułości: 0.65
-wskaźnik średniej geometrycznej czułości i specyficzności: 0.7332645616534365
-AUC: 0.33051314673452076
+poprawność klasyfikacji: 0.8212781677133358
+wskaźnik specyficzności: 0.8217487958503149
+wskaźnik czułości: 0.6625
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7378404822526571
+AUC: 0.3366981907894737
 
 komplikacja 3
-poprawność klasyfikacji: 0.65718507572959
-wskaźnik specyficzności: 0.655902004454343
-wskaźnik czułości: 0.9230769230769231
-wskaźnik średniej geometrycznej czułości i specyficzności: 0.7781053939613202
-AUC: 0.46792823789628907
+poprawność klasyfikacji: 0.6888806797192464
+wskaźnik specyficzności: 0.6880475129918338
+wskaźnik czułości: 0.8615384615384616
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7699216816068691
+AUC: 0.43734508797918853
 
 komplikacja 4
-poprawność klasyfikacji: 0.6834133727373476
-wskaźnik specyficzności: 0.6826280623608018
-wskaźnik czułości: 0.8461538461538461
-wskaźnik średniej geometrycznej czułości i specyficzności: 0.7600055002821624
-AUC: 0.4294279623378931
+poprawność klasyfikacji: 0.7053195419283339
+wskaźnik specyficzności: 0.7047512991833704
+wskaźnik czułości: 0.823076923076923
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.7616196759973528
+AUC: 0.4181753552241085
 
 komplikacja 5
 poprawność klasyfikacji: 0.9275951237532324
@@ -293,11 +813,11 @@ wskaźnik średniej geometrycznej czułości i specyficzności: 0.68242950265225
 AUC: 0.28061224489795916
 
 komplikacja 6
-poprawność klasyfikacji: 0.597709641669745
-wskaźnik specyficzności: 0.5993788819875776
-wskaźnik czułości: 0.5648854961832062
-wskaźnik średniej geometrycznej czułości i specyficzności: 0.5818766511497846
-AUC: 0.3158966359758707
+poprawność klasyfikacji: 0.5007388252678242
+wskaźnik specyficzności: 0.4924301242236025
+wskaźnik czułości: 0.6641221374045801
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.571868644552035
+AUC: 0.3632550450378942
 
 komplikacja 7
 poprawność klasyfikacji: 0.5906908016254155
@@ -307,32 +827,32 @@ wskaźnik średniej geometrycznej czułości i specyficzności: 0.54946022228411
 AUC: 0.3031330437580437
 
 komplikacja 8
-poprawność klasyfikacji: 0.7685999261174732
-wskaźnik specyficzności: 0.7720418066442702
-wskaźnik czułości: 0.4392857142857143
-wskaźnik średniej geometrycznej czułości i specyficzności: 0.5823632341504412
-AUC: 0.22951444622792938
+poprawność klasyfikacji: 0.7437753971185814
+wskaźnik specyficzności: 0.74662187383352
+wskaźnik czułości: 0.4714285714285714
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.5932780826717429
+AUC: 0.24525185796862103
 
 komplikacja 9
-poprawność klasyfikacji: 0.8433690432212781
-wskaźnik specyficzności: 0.8440251572327044
-wskaźnik czułości: 0.4
-wskaźnik średniej geometrycznej czułości i specyficzności: 0.5810422212654446
-AUC: 0.20189035916824194
+poprawność klasyfikacji: 0.9597340229035833
+wskaźnik specyficzności: 0.9610062893081761
+wskaźnik czułości: 0.1
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.31000101440288486
+AUC: 0.05189035916824203
 
 komplikacja 10
-poprawność klasyfikacji: 0.9236054673069819
-wskaźnik specyficzności: 0.9243803181650019
-wskaźnik czułości: 0.4
-wskaźnik średniej geometrycznej czułości i specyficzności: 0.6080724687617429
-AUC: 0.20388349514563103
+poprawność klasyfikacji: 0.8885851496121168
+wskaźnik specyficzności: 0.8890862005179431
+wskaźnik czułości: 0.55
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.6992834977924681
+AUC: 0.27864238410596026
 
 komplikacja 11
-poprawność klasyfikacji: 0.9281492427041005
-wskaźnik specyficzności: 0.9283918669131238
-wskaźnik czułości: 0.6
-wskaźnik średniej geometrycznej czułości i specyficzności: 0.7463478546548347
-AUC: 0.30307850179579277
+poprawność klasyfikacji: 0.9544883635020318
+wskaźnik specyficzności: 0.9548243992606285
+wskaźnik czułości: 0.5
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.6909502150157523
+AUC: 0.25405844155844154
 
 komplikacja 12
 poprawność klasyfikacji: 0.8223125230882896
@@ -340,132 +860,104 @@ wskaźnik specyficzności: 0.8227239082161362
 wskaźnik czułości: 0.6
 wskaźnik średniej geometrycznej czułości i specyficzności: 0.7025911648531326
 AUC: 0.3031120331950208
+--------------------
+nazwa metody: 4. naiwny klasyfikator bayesowski
+walidacja krzyżowa fold: 0/10
+walidacja krzyżowa fold: 1/10
+walidacja krzyżowa fold: 2/10
+walidacja krzyżowa fold: 3/10
+walidacja krzyżowa fold: 4/10
+walidacja krzyżowa fold: 5/10
+walidacja krzyżowa fold: 6/10
+walidacja krzyżowa fold: 7/10
+walidacja krzyżowa fold: 8/10
+walidacja krzyżowa fold: 9/10
 
+komplikacja 0
+poprawność klasyfikacji: 0.8459549316586628
+wskaźnik specyficzności: 0.0
+wskaźnik czułości: 1.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.0
+AUC: 0.9229774658293314
 
+komplikacja 1
+poprawność klasyfikacji: 0.990764684152198
+wskaźnik specyficzności: 1.0
+wskaźnik czułości: 0.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.0
 
+komplikacja 2
+poprawność klasyfikacji: 0.9948282231252309
+wskaźnik specyficzności: 0.9974064468321601
+wskaźnik czułości: 0.125
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.3530946131761571
+AUC: 0.125
 
+komplikacja 3
+poprawność klasyfikacji: 0.9844846693756927
+wskaźnik specyficzności: 0.9881217520415738
+wskaźnik czułości: 0.23076923076923078
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.47752287549915196
+AUC: 0.1582417582417583
 
+komplikacja 4
+poprawność klasyfikacji: 0.9878093830809014
+wskaźnik specyficzności: 0.9925760950259837
+wskaźnik czułości: 0.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.0
+AUC: 0.0
 
+komplikacja 5
+poprawność klasyfikacji: 0.9833764314739564
+wskaźnik specyficzności: 0.9914275065225494
+wskaźnik czułości: 0.08333333333333333
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.28743513855629954
+AUC: 0.08166666666666661
 
+komplikacja 6
+poprawność klasyfikacji: 0.9431104543775397
+wskaźnik specyficzności: 0.9871894409937888
+wskaźnik czułości: 0.07633587786259542
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.27451406629705827
+AUC: 0.1544470086987395
 
-[1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
-[0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+komplikacja 7
+poprawność klasyfikacji: 0.9168821573697821
+wskaźnik specyficzności: 0.9983890455094644
+wskaźnik czułości: 0.013392857142857142
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.11563425902171794
+AUC: 0.2209821428571429
 
+komplikacja 8
+poprawność klasyfikacji: 0.9896564462504618
+wskaźnik specyficzności: 1.0
+wskaźnik czułości: 0.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.0
 
-S
-C=[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+komplikacja 9
+poprawność klasyfikacji: 0.9985223494643517
+wskaźnik specyficzności: 1.0
+wskaźnik czułości: 0.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.0
 
+komplikacja 10
+poprawność klasyfikacji: 0.9977835241965275
+wskaźnik specyficzności: 0.9992600813910469
+wskaźnik czułości: 0.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.0
+AUC: 0.0
 
+komplikacja 11
+poprawność klasyfikacji: 0.9985223494643517
+wskaźnik specyficzności: 0.9992606284658041
+wskaźnik czułości: 0.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.0
+AUC: 0.0
 
-prawdziwch 3 pacjentów:
- S1 S2 S3 ...                           D1 D2 D3 D4 D5 D6 D7 D8 D9 D10D11D12D13
-[0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-[0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0]
+komplikacja 12
+poprawność klasyfikacji: 0.9981529368304396
+wskaźnik specyficzności: 1.0
+wskaźnik czułości: 0.0
+wskaźnik średniej geometrycznej czułości i specyficzności: 0.0
 
-
-
-
-Sp = [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0,] - ??? -> D?
-
-
-
-
+Process finished with exit code 0
