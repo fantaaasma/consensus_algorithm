@@ -61,7 +61,6 @@ def get_learn_and_test_data(folds, fold_number):
 
 
 def check_method(method_fun, views, consensus_fun, number_of_folds, number_of_complications):
-
     print('{}\nnazwa metody: {}'.format('-' * 20, method_fun.name))
 
     if consensus_fun:

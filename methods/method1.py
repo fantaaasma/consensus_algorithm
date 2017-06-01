@@ -10,9 +10,12 @@ def test(data, consensuses, number_of_complications):
         predicted_complications = [0] * number_of_complications
         symptoms = patient[:-number_of_complications]
 
-        for i in range(len(consensuses)):
+        no_complication = 1
+        for i in range(len(consensuses) - 1):
             if consensuses[i] == symptoms:
-                predicted_complications[i] = 1
+                predicted_complications[i + 1] = 1
+                no_complication = 0
+        predicted_complications[0] = no_complication
 
         predicted.append(predicted_complications)
 
